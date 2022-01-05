@@ -11,5 +11,5 @@ deny[msg] {
 
 deny[msg] {
 	version < 3.5
-	msg = sprintf("Must be using at least version 3.5 of the Compose file format, found %v", input.version)
+	msg := sprintf("Must be using at least version 3.5 of the Compose file format, found %v", input.version)
 }
