@@ -6,6 +6,6 @@ deny[msg] {
 }
 
 deny[msg] {
-	semver_compare(input.version, "3.5") == 1
+	semver.compare(input.version, "3.5") == 1
 	msg = sprintf("Must be using at least version 3.5 of the Compose file format, found %v", [input.version])
 }
