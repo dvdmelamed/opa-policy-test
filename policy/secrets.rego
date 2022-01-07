@@ -1,4 +1,4 @@
-package main
+package secrets
 
 files_blacklist = [
   "serverless.yml"
