@@ -5,8 +5,8 @@ files_blacklist = [
 ]
 
 deny[msg] {
-  some i, j
-    input[i].RuleID == "aws-access-token"
-    files_blacklist[j] == input[i].File
-    msg := sprintf("AWS secret found in file %v", [input[i].File])
+  some i
+    input.RuleID == "aws-access-token"
+    files_blacklist[i] == input.File
+    msg := sprintf("AWS secret found in file %v", [input.File])
 }
