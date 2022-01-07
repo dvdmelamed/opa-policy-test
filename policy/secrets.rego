@@ -11,7 +11,6 @@ deny[msg] {
 }
 
 deny[msg] {
-  some i
     input.RuleID == "aws-access-token"
     msg := sprintf("AWS secret found in file %v", [input.File])
 }
